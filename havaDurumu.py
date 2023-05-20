@@ -33,7 +33,7 @@ def get_weather(api_key, city):
         print("Hata: ", e)
 
 # API anahtarınızı ve hava durumunu almak istediğiniz şehiri girin
-api_key = "94134aaa7332703a1ab42bebc2d448b9"
+api_key = str(input("API anahtarınızı giriniz: "))
 city = str(input("şehir ismi giriniz: "))
 
 get_weather(api_key, city)
