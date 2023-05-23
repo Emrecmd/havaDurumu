@@ -9,6 +9,7 @@ def get_weather(api_key, city):
         "units": "metric"
     }
 
+
     try:
         response = requests.get(base_url, params=params)
         data = response.json()
