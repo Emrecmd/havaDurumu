@@ -18,13 +18,13 @@ def get_weather(api_key, city):
             print("Şehir bulunamadı!")
             return
 
-        # Hava durumu bilgilerini al
+      
         weather = data["weather"][0]["description"]
         temperature = data["main"]["temp"]
         humidity = data["main"]["humidity"]
         wind_speed = data["wind"]["speed"]
 
-        # Bilgileri yazdır
+        
         print(f"Hava Durumu: {weather}")
         print(f"Sıcaklık: {temperature}°C")
         print(f"Nem: {humidity}%")
@@ -33,7 +33,6 @@ def get_weather(api_key, city):
     except requests.exceptions.RequestException as e:
         print("Hata: ", e)
 
-# API anahtarınızı ve hava durumunu almak istediğiniz şehiri girin
 api_key = str(input("API anahtarınızı giriniz: "))
 city = str(input("şehir ismi giriniz: "))
 
